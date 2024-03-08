@@ -18,14 +18,13 @@ public class CommentsController implements Controller {
 	@Override
 	public void handle(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		request.setCharacterEncoding("UTF-8");		//항상 맨앞에. 주석처리는 필터 적용 확인목적
-		
 		CommunityCommentsDao dao = CommunityCommentsDao.getInstance();
 		String f = request.getParameter("f");
 		String url=null;		//redirect url 변수
 		long mref = Long.parseLong(request.getParameter("mref"));   //메인글의 idx 를 댓글테이블 mref 컬럼에 저장해야 함.(댓글추가)
 		logger.info("::::::CommentesController  f={} :::::::",f);
-		String page = request.getParameter("page");         // 현재페이지 번호 전달 - 순서9)
 		
+		String page = request.getParameter("page");         // 현재페이지 번호 전달 - 순서9)
 		// 댓글 작성 추가
 		if(f.equals("1")) {
 			CommunityComments vo =CommunityComments.builder()
