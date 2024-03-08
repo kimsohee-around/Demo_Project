@@ -25,8 +25,9 @@
 			<h3>북챗 :: 커뮤니티</h3>
 			<p>오늘 무슨 책을 읽으셨나요?</p>
 			<form name="frm1" method="post" action="update">
-				<input type="hidden" name="idx" value="${vo.idx }"> <input
-					type="hidden" name="page" value="${page}">
+			<!-- type이 hidden 은 출력은 되지 않고 파라미터로 전달하고 싶은 값에 사용합니다. -->
+				<input type="hidden" name="idx" value="${vo.idx }"> 
+				<input type="hidden" name="page" value="${page}">
 				<!-- 현재페이지 번호 전달 - 순서5) post 로 전달해야 하므로 hidden type으로 저장 -->
 				<table>
 					<tr>
