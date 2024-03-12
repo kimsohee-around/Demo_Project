@@ -32,11 +32,15 @@
 		<div>인증과정 단계만 추가한 테스트용-확인버튼 클릭만 하세요. </div>
 </div>
 <script>
+	//jsp의 el 을 이용하여 pageContext 의 request 객체 프로퍼티값을 가져오기
+	console.log('${pageContext.request.requestURL}')
 	document.querySelector('#confirm').addEventListener('click',()=>{
 		//var yn = '${param.adultYn}'  /* 14세미만 보호자개인정보 제공은 본인 인증 api 에 따라 추가 코드 작성시 사용 */
 		var message = {successYn : 'Y'};
 		message = JSON.stringify(message)
-		var targetOrigin = 'http://localhost:8083/DemoProj/join'; // 부모 창의 origin
+		
+		var targetOrigin = '${pageContext.request.requestURL}'  // 부모 창의 origin
+	/*  'http://localhost:8088/DemoProject/join';   고정된 값은 직접 수정해야 하므로 좋지 않음. */
 		window.opener.postMessage(message, targetOrigin);
 		
 		self.close();

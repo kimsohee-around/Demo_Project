@@ -22,7 +22,7 @@
       <!-- Modal Header -->
       <div class="modal-header">
         <h4 class="modal-title">결제 실패</h4>
-        <button type="button" class="btn-close" onclick="location.href='/DemoProject'"></button>
+        <button type="button" class="btn-close" onclick="location.href='${pageContext.request.contextPath}'"></button>
       </div>
 
       <!-- Modal body -->
@@ -32,7 +32,7 @@
 
       <!-- Modal footer -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" onclick="location.href='/DemoProject'">Close</button>
+        <button type="button" class="btn btn-danger" onclick="location.href='${pageContext.request.contextPath}'">Close</button>
       </div>
 
     </div>

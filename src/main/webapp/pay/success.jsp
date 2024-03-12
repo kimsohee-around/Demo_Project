@@ -61,7 +61,7 @@
 											</div>
 											<div class="paybtn">
 												<h4>구매하신 도서는 2일 이내 도착하도록 배송해 드리겠습니다.</h4>
-												<a class="btn btn-primary ok" href="/DemoProject">⛪홈</a>&nbsp;&nbsp;&nbsp;
+												<a class="btn btn-primary ok" href="${pageContext.request.contextPath}">⛪홈</a>&nbsp;&nbsp;&nbsp;
 												<a class="btn btn-primary ok" href="../book/bookcase">📚책장더보기</a>
 											</div>
 										</article>
