@@ -21,18 +21,18 @@
 
       <!-- Modal Header -->
       <div class="modal-header">
-        <h4 class="modal-title">결제 실패</h4>
-        <button type="button" class="btn-close" onclick="location.href='${pageContext.request.contextPath}'"></button>
+        <h4 class="modal-title">회원 탈퇴</h4>
+        <button type="button" class="btn-close" onclick="location.href='/DemoProj'"></button>
       </div>
 
       <!-- Modal body -->
       <div class="modal-body">
-        	<p>${payErr}</p>
+        	<p>그동안 함께 해주셔서 감사합니다. 다음에 또 만나요.</p>
       </div>
 
       <!-- Modal footer -->
       <div class="modal-footer">
-        <button type="button" class="btn btn-danger" onclick="location.href='${pageContext.request.contextPath}'">Close</button>
+        <button type="button" class="btn btn-danger" onclick="location.href='/DemoProj'">Close</button>
       </div>
 
     </div>
